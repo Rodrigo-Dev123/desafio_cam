@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+
+}
+
+.container {
+  min-height: 100vh;
+  background: #eee;
+  padding: 30px;
+}
+
+.post img {
+  background-size: cover;
+  width: 100%;
+}
+
+.post-content {
+  padding: 30px;
+  display: block;
+  width: 100%;
+}
