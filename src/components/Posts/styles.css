@@ -1,5 +1,10 @@
 .post-content {
-    padding: 30px;
+    padding: 20px;
     display: block;
     width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
 }

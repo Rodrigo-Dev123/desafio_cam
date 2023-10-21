@@ -7,7 +7,6 @@ export default function Modal() {
   const { modal, removeItem, setModal, postModal } = context;
 
   const toggleModal = () => {
-    //console.log('aqui', postModal)
     setModal(!modal);
   };
 

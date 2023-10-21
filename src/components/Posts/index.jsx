@@ -1,3 +1,4 @@
+import './styles.css';
 import { useContext } from "react";
 import ButtonModal from "../buttonModal";
 import Modal from "../Modal";

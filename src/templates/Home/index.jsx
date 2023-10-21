@@ -1,6 +1,6 @@
 import './styles.css';
 import Posts from '../../components/Posts';
-import GlobalProvider, { GlobalContext } from '../../contexts/GlobalContext';
+import GlobalProvider from '../../contexts/GlobalContext';
 
 function Home() {
 
