@@ -28,28 +28,27 @@ const GlobalProvider = ({ children }) => {
 
     useEffect(() => {
         if (!localStorage.getItem('items')) {
-            console.log('Execultado!!!')
             const fetchData = async () => {
+                console.log('fetch execultou!');
                 const result = await fetch('https://jsonplaceholder.typicode.com/photos')
                     .then(response => response.json())
                     .then(data => data)
 
-
-                localStorage.setItem('items', JSON.stringify(result))
+                localStorage.setItem('items', JSON.stringify(result));
+                setItems(result);
             }
+
             fetchData();
+            return;
         }
-
         setItems(JSON.parse(localStorage.getItem('items')));
-
-    }, []);
-
+    }, [currentPage]);
 
     return (
         <GlobalContext.Provider value={{
             currentItems, items, setItems, itemsPerPage,
             currentPage, setCurrentPage, modal, setModal,
-            startIndex, endIndex, pages, removeItem, 
+            startIndex, endIndex, pages, removeItem,
             postModal, setPostModal
         }}>
             {children}

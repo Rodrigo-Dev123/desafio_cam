@@ -16,11 +16,11 @@ export default function Modal() {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-            <div className="post">
+            <div className="">
               {postModal.map((post) => {
                 return (
                   <>
-                    <img src={post.url} alt={post.title}></img>
+                    <img className="modal-image" src={post.url} alt={post.title}></img>
                     <div className='post-content'>
                       <p>{post.title}</p>
                       <h1>{post.id}</h1>

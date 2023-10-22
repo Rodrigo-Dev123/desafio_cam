@@ -6,8 +6,7 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import Pagination from "../Pagination";
 
 export default function Posts({ post }) {
-    const context = useContext(GlobalContext);
-    const { removeItem, currentItems } = context;
+    const { removeItem, currentItems, } = useContext(GlobalContext);
 
 
     return (
