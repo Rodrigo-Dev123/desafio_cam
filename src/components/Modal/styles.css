@@ -35,8 +35,32 @@
     top: 10px;
     right: 10px;
     padding: 5px 7px;
+    cursor: pointer;
 }
 
 .modal-image {
     width: 450px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-delete {
+    width: max-content;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal-delete-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.modal-delete-icon:hover {
+    color: red;
 }

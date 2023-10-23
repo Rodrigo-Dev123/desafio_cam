@@ -4,6 +4,7 @@ import ButtonModal from "../buttonModal";
 import Modal from "../Modal";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import Pagination from "../Pagination";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function Posts({ post }) {
     const { removeItem, currentItems, } = useContext(GlobalContext);
@@ -16,10 +17,14 @@ export default function Posts({ post }) {
                     return (
                         <div key={post.id} className="post">
                             <img src={post.url} alt={post.title}></img>
-                            <h1>{post.id}</h1>
+                            <h3>Foto {post.id}</h3>
                             <div className='post-content'>
                                 <ButtonModal id={post.id}/>
-                                <button onClick={() => removeItem(post.id)}>Excluir</button>
+                                <button className='btn-delete-post' onClick={() => removeItem(post.id)}>
+                                    <RiDeleteBin6Line
+                                        className='icon-delete'
+                                    />
+                                </button>
                             </div>
                         </div>
                     );

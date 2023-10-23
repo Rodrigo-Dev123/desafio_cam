@@ -1,14 +1,80 @@
 .pagination {
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 10px;
-    margin-top: 10px;
+    margin-top: auto;
+    height: 70px;
 }
 
 .pagination div {
     margin: auto;
-    margin-top: 0%;
+    /* position: relative; */
+    justify-content: center;
     display: flex;
+    height: 100%;
     max-width: max-content;
     gap: 10px;
+}
+
+.btn-pagination {
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.btn-left, .btn-right {
+    background-color: #ccffff;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-right:hover {
+    transform: scale(1.07);
+    transition: ease-in-out, 300ms;
+}
+
+.btn-left:hover {
+    transform: scale(1.07);
+    transition: ease-in-out, 300ms;
+}
+
+.arrow-left {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+}
+
+.arrow-right {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+}
+
+.btn-page {
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.btn-page:hover {
+    transform: scale(1.07);
+    transition: ease-in-out, 300ms;
+}
+
+.container-button {
+    align-items: center;
+    background-color: rgb(136, 231, 231);
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.container-button div {
+    align-items: center;
 }

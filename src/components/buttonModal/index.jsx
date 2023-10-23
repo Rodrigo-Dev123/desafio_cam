@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
 export default function ButtonModal({ id }) {
-    const context = useContext(GlobalContext);
-    const { modal, setModal, setPostModal, currentItems } = context;
+    const { modal, setModal, setPostModal, currentItems } = useContext(GlobalContext);
 
     const toggleModal = (e) => {
         const photoClicked = currentItems.filter(post => post.id === parseInt(e.target.id))
@@ -13,6 +12,6 @@ export default function ButtonModal({ id }) {
     };
 
     return (
-        <input type="button" id={id}  onClick={toggleModal} value="Ver Mais" />
+        <input className="show-more" type="button" id={id}  onClick={toggleModal} value="Ver Mais" />
     )
 }

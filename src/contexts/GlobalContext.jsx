@@ -23,7 +23,7 @@ const GlobalProvider = ({ children }) => {
         localStorage.setItem('items', JSON.stringify(updatedItems))
         setItems(JSON.parse(localStorage.getItem('items')));
         console.log(updatedItems)
-        alert('Foto apagada com sucesso!');
+        alert(`Foto ${id} apagada com sucesso! ｡◕‿◕｡`);
     }
 
     useEffect(() => {
@@ -39,10 +39,10 @@ const GlobalProvider = ({ children }) => {
             }
 
             fetchData();
-            return;
+            return; 
         }
         setItems(JSON.parse(localStorage.getItem('items')));
-    }, [currentPage]);
+    }, []);
 
     return (
         <GlobalContext.Provider value={{

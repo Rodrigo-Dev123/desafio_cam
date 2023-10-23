@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import { AiOutlineClose } from "react-icons/ai";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import "./styles.css";
 
 export default function Modal() {
-  const context = useContext(GlobalContext);
-  const { modal, removeItem, setModal, postModal } = context;
+  const { modal, removeItem, setModal, postModal } = useContext(GlobalContext);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -19,20 +20,24 @@ export default function Modal() {
             <div className="">
               {postModal.map((post) => {
                 return (
-                  <>
+                  <div key={post.id}>
                     <img className="modal-image" src={post.url} alt={post.title}></img>
-                    <div className='post-content'>
-                      <p>{post.title}</p>
-                      <h1>{post.id}</h1>
-                      <button onClick={() => removeItem(post.id)}>Excluir</button>
+                    <div className='post-info'>
+                      <h1>{post.title}</h1>
+                      <p style={ {fontSize: "20px"}}>Foto {post.id}</p>
+                      <button className="modal-delete" onClick={() => removeItem(post.id)}>
+                        <RiDeleteBin6Line
+                          className='modal-delete-icon'
+                        />
+                      </button>
                     </div>
-                  </>
+                  </div>
                 )
               })}
             </div>
 
             <button className="close-modal" onClick={toggleModal}>
-              CLOSE
+              <AiOutlineClose />
             </button>
           </div>
         </div >

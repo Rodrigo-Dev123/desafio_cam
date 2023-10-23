@@ -19,6 +19,6 @@ code {
 }
 
 #root {
-  background: #eee;
+  background: radial-gradient(circle, rgba(31, 23, 173, 1) 0%, rgba(37, 37, 235, 1) 35%, rgba(0, 212, 255, 1) 100%);
   position: relative;
 }

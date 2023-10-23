@@ -1,32 +1,36 @@
 import './styles.css'
 import { useState, useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import { MdOutlineArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
 
 const Pagination = () => {
-    const context = useContext(GlobalContext);
-    const { pages, currentPage, setCurrentPage } = context
-    const qtdButtuns = 10;
-    const [start, setStart] = useState(qtdButtuns);
+    const { pages, currentPage, setCurrentPage } = useContext(GlobalContext);
+    const ButtonsLength = 5;
+    const [start, setStart] = useState(ButtonsLength);
     const [end, setEnd] = useState(0);
-
+    console.log(pages)
     const setNext = () => {
-        setStart(start + qtdButtuns)
-        setEnd(end + qtdButtuns)
+        setStart(start + ButtonsLength)
+        setEnd(end + ButtonsLength)
     };
 
     const setBack = () => {
-        setEnd(end - qtdButtuns)
-        setStart(start - qtdButtuns)
+        setEnd(end - ButtonsLength)
+        setStart(start - ButtonsLength)
     };
 
     return (
         <div className="pagination">
-            <div>
-                {end !== 0 && <button onClick={setBack}>back</button>}
+            <div className='container-button'>
+                {end !== 0 && <button className='btn-left' onClick={setBack}>
+                    <MdOutlineArrowBackIosNew className='arrow-left' />
+                </button>}
+
                 <div>{Array.from(Array(pages), (item, index) => {
                     return <button
                         key={index}
-                        style={index === currentPage ? { backgroundColor: "gray" } : null}
+                        className='btn-page'
+                        style={index === currentPage ? { backgroundColor: "red", } : null}
                         value={index}
                         onClick={(e) => setCurrentPage(Number(e.target.value))}
                     >
@@ -34,7 +38,15 @@ const Pagination = () => {
                     </button>
                 }).slice(end, start)}</div>
 
-                {start < pages && <button onClick={setNext}>next</button>}
+                {currentPage < 10 && <button
+                    className='btn-page'
+                    value={pages - 1}
+                    onClick={(e) => setCurrentPage(Number(e.target.value))}
+                >...</button>}
+
+                {start < pages && <button className='btn-right' onClick={setNext}>
+                    <MdOutlineArrowForwardIos className='arrow-right' />
+                </button>}
             </div>
         </div>
     )
