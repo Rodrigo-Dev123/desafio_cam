@@ -22,7 +22,8 @@
     cursor: pointer;
 }
 
-.btn-left, .btn-right {
+.btn-left,
+.btn-right {
     background-color: #ccffff;
     align-items: center;
     height: 45px;
@@ -77,4 +78,41 @@
 
 .container-button div {
     align-items: center;
+}
+
+@media only screen and (max-width: 1580px) {
+    .pagination {
+        width: 100%;
+        position: -webkit-sticky;
+        /* Safari */
+        position: sticky;
+        bottom: 10px;
+        /* position: absolute; */
+        
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .btn-page {
+        height: 100%;
+        border-radius: 50%;
+        border: none;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .btn-left,
+    .btn-right {
+        height: 30px;
+        width: 30px;
+    }
+
+    .container-button {
+        margin: 40px;
+
+        bottom: 0;
+        height: 30px;
+
+    }
 }

@@ -1,6 +1,13 @@
-.show-more {
-    display: block;
+input[type="button"] {
     cursor: pointer;
     border: none;
-    background: transparent;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+
+input[type="button"]:hover {
+    text-decoration: underline;
+    color: blue;
 }

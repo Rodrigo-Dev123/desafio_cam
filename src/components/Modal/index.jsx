@@ -23,13 +23,19 @@ export default function Modal() {
                   <div key={post.id}>
                     <img className="modal-image" src={post.url} alt={post.title}></img>
                     <div className='post-info'>
-                      <h1>{post.title}</h1>
-                      <p style={ {fontSize: "20px"}}>Foto {post.id}</p>
-                      <button className="modal-delete" onClick={() => removeItem(post.id)}>
-                        <RiDeleteBin6Line
-                          className='modal-delete-icon'
-                        />
-                      </button>
+                      <div className="container-text">
+                        <h1 className="description">{post.title}</h1>
+                        <div className="text-modal" style={{ fontSize: "20px" }}>
+                          <p>Foto {post.id}</p>
+                          <button className="modal-delete" onClick={() => removeItem(post.id)}>
+                            <RiDeleteBin6Line
+                              className='modal-delete-icon'
+                            />
+                          </button>
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
                 )

@@ -1,3 +1,5 @@
+import './styles.css'
+
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
@@ -12,6 +14,6 @@ export default function ButtonModal({ id }) {
     };
 
     return (
-        <input className="show-more" type="button" id={id}  onClick={toggleModal} value="Ver Mais" />
+        <input type="button" id={id} onClick={toggleModal} value="Ver Mais" />
     )
 }

@@ -10,3 +10,9 @@
   background-size: cover;
   width: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+  .App {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

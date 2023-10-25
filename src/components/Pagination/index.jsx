@@ -30,7 +30,7 @@ const Pagination = () => {
                     return <button
                         key={index}
                         className='btn-page'
-                        style={index === currentPage ? { backgroundColor: "red", } : null}
+                        style={index === currentPage ? { boxShadow: "3px 3px 10px 1px" } : null}
                         value={index}
                         onClick={(e) => setCurrentPage(Number(e.target.value))}
                     >
@@ -38,7 +38,7 @@ const Pagination = () => {
                     </button>
                 }).slice(end, start)}</div>
 
-                {currentPage < 10 && <button
+                {currentPage < 100 && <button
                     className='btn-page'
                     value={pages - 1}
                     onClick={(e) => setCurrentPage(Number(e.target.value))}
