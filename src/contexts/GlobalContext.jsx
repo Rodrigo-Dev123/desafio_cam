@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import { createContext, useState, useEffect } from "react";
 
 export const GlobalContext = createContext();
@@ -22,7 +23,6 @@ const GlobalProvider = ({ children }) => {
 
         localStorage.setItem('items', JSON.stringify(updatedItems))
         setItems(JSON.parse(localStorage.getItem('items')));
-        console.log(updatedItems)
         alert(`Foto ${id} apagada com sucesso! ｡◕‿◕｡`);
     }
 
@@ -39,7 +39,7 @@ const GlobalProvider = ({ children }) => {
             }
 
             fetchData();
-            return; 
+            return;
         }
         setItems(JSON.parse(localStorage.getItem('items')));
     }, []);
@@ -55,5 +55,9 @@ const GlobalProvider = ({ children }) => {
         </GlobalContext.Provider>
     )
 }
+
+GlobalProvider.propTypes = {
+    children: P.node.isRequired,
+};
 
 export default GlobalProvider;

@@ -46,8 +46,6 @@
     cursor: pointer;
 }
 
-
-
 .post-info {
     display: flex;
     flex-direction: column;
@@ -55,7 +53,6 @@
 }
 
 .modal-delete {
-    /* width: max-content; */
     display: block;
     margin: 0 10px;
     border: none;
@@ -101,7 +98,7 @@
         padding: 14px 28px;
         border-radius: 10px;
         width: 300px;
-        height: 450px;
+        height: max-content;
         margin: 20px;
     }
 

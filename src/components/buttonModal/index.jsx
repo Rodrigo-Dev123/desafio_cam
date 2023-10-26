@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import './styles.css'
 
 import { useContext } from "react";
@@ -16,4 +17,8 @@ export default function ButtonModal({ id }) {
     return (
         <input type="button" id={id} onClick={toggleModal} value="Ver Mais" />
     )
+}
+
+ButtonModal.propTypes = {
+    id: P.number.isRequired,
 }

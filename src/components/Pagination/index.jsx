@@ -8,7 +8,7 @@ const Pagination = () => {
     const ButtonsLength = 5;
     const [start, setStart] = useState(ButtonsLength);
     const [end, setEnd] = useState(0);
-    console.log(pages)
+    
     const setNext = () => {
         setStart(start + ButtonsLength)
         setEnd(end + ButtonsLength)
