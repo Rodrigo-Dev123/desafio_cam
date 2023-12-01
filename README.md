@@ -31,4 +31,4 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ## Deploy
-[**Click here**](http://localhost:3000/) to see the project in production
+[**Click here**](https://rodrigo-desafio-cam.netlify.app/) to see the project in production
